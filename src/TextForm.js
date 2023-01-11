@@ -17,6 +17,7 @@ function TextForm(props) {
 
   return (
     <>
+    
     <div className='container'>
     <h1 className='text-center m-4'>Text Converter</h1>
     <div className='container col-8'>
@@ -24,6 +25,7 @@ function TextForm(props) {
     <button className='btn btn-primary mt-4' onClick={handleUpClick}>Converter to uppercase</button>
     </div>
     </div>
+
     </>
   )
 }
