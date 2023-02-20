@@ -2,13 +2,13 @@ import './App.css';
 import TextForm from './TextForm';
 import Navbar from './Navbar';
 import About from './About';
-import { useState } from 'react';
+import {React, useState } from 'react';
 import Alert from './Alert.js';
 import {
   BrowserRouter as Router,
-  Switch,
+  Routes,
   Route,
-  Link
+  Link,
 } from "react-router-dom"
 
 function App() {
@@ -48,19 +48,18 @@ function App() {
   return (
     <>
     <Router>
-
-    <Navbar title="TextUtils" mode={mode} toggleMode={toggleMode}/>
+    <Navbar title="TextUtils" linkOne="About" mode={mode} toggleMode={toggleMode}/>
     <Alert alert={alert}/>
-    <div className='container my-3'>
-    <Switch>
+    {/* <div className='container my-3'> */}
+    <Routes>
           <Route path="/about">
             <About />
           </Route>
           <Route path="/">
             <TextForm showAlert={showAlert} mode={mode}/>
           </Route>
-    </Switch>
-    </div>
+    </Routes>
+    {/* </div> */}
     </Router>
     </>
   );
