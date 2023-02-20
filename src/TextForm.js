@@ -6,15 +6,18 @@ function TextForm(props) {
   const handleUpClick = ()=>{
     let newText = text.toLocaleUpperCase();
     setText(newText)
+    props.showAlert("Converted to uppercase", "success")
   }
   
   const handleDownClick = ()=>{
     let newText = text.toLocaleLowerCase()
     setText(newText)
+    props.showAlert("Converted to lowercase", "success")
   }
 
   const handleClearClick = ()=>{
     setText("")
+    props.showAlert("Text cleared", "success")
   }
   
 
@@ -27,11 +30,13 @@ function TextForm(props) {
     var text = document.querySelector("#myBox")
     text.select();
     navigator.clipboard.writeText(text.value)
+    props.showAlert("Copied to clipboard", "success")
   }
 
   const handleExtraSpace = () => {
     let newText = text.split(/[ ]+/)
     setText(newText.join(" "))
+    props.showAlert("Extra space Removed", "success")
   }
 
   const [ text, setText] = useState("")
