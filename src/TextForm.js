@@ -38,7 +38,6 @@ function TextForm(props) {
 
   return (
     <>
-    
     <div className='container'>
     <h1 className='text-center m-4' style={{color:props.mode === 'dark'? '#fff':'black'}}>Text Converter</h1>
     <div className='container col-8'>
