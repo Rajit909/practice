@@ -45,12 +45,11 @@ function App() {
 
   return (
     <>
-  
     <Navbar title="TextUtils" linkOne="Home" linkTwo="About" mode={mode} toggleMode={toggleMode}/>
     <Alert alert={alert}/>
     <div className='container my-3'>
     <Routes>
-          <Route path="/about" element={<About/>}/>
+          <Route exact path="/about" element={<About/>}/>
           <Route path="/"
           element={
           <TextForm showAlert={showAlert} mode={mode}/>

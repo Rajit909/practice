@@ -60,7 +60,7 @@ function TextForm(props) {
         Your text summary
       </h2>
       <p>
-        {text.split("").length} Words and {text.length} Characters
+        {text.split(" ").filter((e)=>{return e.length !== 0}).length} Words and {text.length} Characters
       </p>
       <p>
         {0.008 * text.split("").length} Minutes read
